@@ -85,8 +85,7 @@ pnpm dev
 
 Para mais informações sobre o projeto, consulte nossa [documentação](docs/):
 
-- [Roadmap](docs/roadmap.md)
-- [Diagrama do Banco de Dados](docs/database-diagram.md)
+- [Arquitetura do Banco de Dados](docs/database-architecture.md)
 - [Guia de Contribuição](docs/CONTRIBUTING.md)
 
 ## 👥 Time
