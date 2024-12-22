@@ -1,20 +1,23 @@
-# Guia de Contribuição
+# 🤝 Guia de Contribuição
 
-Obrigado por considerar contribuir com o MoraHub! Este documento fornece diretrizes e informações importantes para contribuir com o projeto.
+> Obrigado por considerar contribuir com o MoraHub! Este documento fornece as diretrizes e melhores práticas para contribuir com nosso projeto.
 
 ## 📋 Índice
 
-- [Código de Conduta](#código-de-conduta)
-- [Como Contribuir](#como-contribuir)
-- [Ambiente de Desenvolvimento](#ambiente-de-desenvolvimento)
-- [Padrões de Código](#padrões-de-código)
-- [Commits e Pull Requests](#commits-e-pull-requests)
-- [Reportando Bugs](#reportando-bugs)
-- [Sugerindo Melhorias](#sugerindo-melhorias)
+- [Código de Conduta](#-código-de-conduta)
+- [Como Contribuir](#-como-contribuir)
+- [Ambiente de Desenvolvimento](#-ambiente-de-desenvolvimento)
+- [Padrões de Código](#-padrões-de-código)
+- [Commits e PRs](#-commits-e-prs)
+- [Reportando Bugs](#-reportando-bugs)
+- [Sugerindo Melhorias](#-sugerindo-melhorias)
+- [Performance](#-performance)
+- [Segurança](#-segurança)
+- [Recursos Úteis](#-recursos-úteis)
 
-## 🤝 Código de Conduta
+## 📜 Código de Conduta
 
-Este projeto segue um Código de Conduta que todos os contribuidores devem respeitar. Por favor, leia [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) antes de contribuir.
+Este projeto e todos os participantes são regidos pelo nosso [Código de Conduta](CODE_OF_CONDUCT.md). Ao contribuir, você concorda em seguir suas diretrizes.
 
 ## 🚀 Como Contribuir
 
@@ -30,17 +33,14 @@ Este projeto segue um Código de Conduta que todos os contribuidores devem respe
 
 ### Pré-requisitos
 
-- Node.js (v18 ou superior)
-- pnpm (v8 ou superior)
+- Node.js 18+
+- pnpm 8+
 - Git
+- VSCode (recomendado)
 
-### Setup
+### Setup do Projeto
 
 ```bash
-# Clone o repositório
-git clone https://github.com/seu-username/morahub.git
-cd morahub
-
 # Instale as dependências
 pnpm install
 
@@ -51,95 +51,138 @@ cp .env.example .env
 pnpm dev
 ```
 
-## 📝 Padrões de Código
+### Extensões Recomendadas (VSCode)
 
-### Geral
+- ESLint
+- Prettier
+- Tailwind CSS IntelliSense
+- GitLens
+- Error Lens
 
-- Use TypeScript para todo código novo
-- Mantenha a compatibilidade com ES6+
-- Siga o estilo de código existente
-- Mantenha os componentes pequenos e focados
-- Escreva comentários claros quando necessário
+## 📐 Padrões de Código
 
 ### TypeScript
 
-- Use tipos explícitos (evite `any`)
-- Prefira interfaces sobre tipos
-- Use enums para valores constantes
-- Documente funções públicas
+- Use tipos explícitos
+- Evite `any`
+- Documente funções complexas
+- Siga o princípio DRY
+
+```typescript
+// ✅ Bom
+interface User {
+  id: string;
+  name: string;
+  email: string;
+}
+
+function getUser(id: string): Promise<User> {
+  // ...
+}
+
+// ❌ Evite
+function getUser(id): any {
+  // ...
+}
+```
 
 ### React
 
-- Use componentes funcionais
-- Implemente tratamento de erros
-- Mantenha o estado o mais local possível
-- Use hooks customizados para lógica reutilizável
+- Use Functional Components
+- Hooks para gerenciamento de estado
+- Props tipadas com interfaces
+- Componentes pequenos e reutilizáveis
 
-### Estilo
+```typescript
+// ✅ Bom
+interface ButtonProps {
+  onClick: () => void;
+  children: React.ReactNode;
+}
 
-- Use ESLint e Prettier
-- Siga as regras do `.editorconfig`
-- Use aspas simples
-- Use ponto e vírgula
+function Button({ onClick, children }: ButtonProps) {
+  return <button onClick={onClick}>{children}</button>;
+}
 
-## 📦 Commits e Pull Requests
+// ❌ Evite
+function Button(props) {
+  return <button onClick={props.onClick}>{props.children}</button>;
+}
+```
 
-### Commits
+### CSS/Tailwind
+
+- Mobile-first
+- Reutilize classes com @apply
+- Mantenha consistência com design tokens
+- Use variáveis CSS para temas
+
+## 📝 Commits e PRs
+
+### Conventional Commits
 
 Seguimos o padrão [Conventional Commits](https://www.conventionalcommits.org/):
 
-- `feat`: Nova feature
-- `fix`: Correção de bug
-- `docs`: Documentação
-- `style`: Formatação
-- `refactor`: Refatoração
-- `test`: Testes
-- `chore`: Manutenção
-
-Exemplo:
-```bash
-git commit -m 'feat: adiciona validação de CPF'
-```
+- `feat:` nova feature
+- `fix:` correção de bug
+- `docs:` documentação
+- `style:` formatação
+- `refactor:` refatoração
+- `test:` testes
+- `chore:` manutenção
 
 ### Pull Requests
 
-- Use o template fornecido
-- Referencie issues relacionadas
-- Inclua screenshots se relevante
 - Mantenha PRs pequenos e focados
-- Responda a todos os comentários
+- Descreva claramente as mudanças
+- Inclua screenshots se relevante
+- Referencie issues relacionadas
+- Aguarde review antes de merge
 
 ## 🐛 Reportando Bugs
 
-Ao reportar bugs, inclua:
-
-- Versão do Node.js e pnpm
-- Sistema operacional
-- Passos para reproduzir
-- Comportamento esperado vs atual
-- Screenshots se possível
-
-Use o template de issue para bugs.
+1. Verifique se o bug já foi reportado
+2. Use o template de bug report
+3. Forneça passos para reproduzir
+4. Inclua logs/screenshots
+5. Descreva o comportamento esperado
 
 ## 💡 Sugerindo Melhorias
 
-Para sugerir melhorias:
-
-1. Verifique se já não existe uma sugestão similar
+1. Verifique se a sugestão já existe
 2. Use o template de feature request
-3. Seja específico e detalhado
-4. Explique o valor da melhoria
-5. Inclua exemplos de uso
+3. Descreva o problema e solução
+4. Considere o impacto da mudança
+5. Forneça exemplos de uso
 
-## ❓ Dúvidas
+## ⚡ Performance
 
-Se tiver dúvidas:
+- Otimize imagens
+- Lazy load componentes
+- Minimize bundle size
+- Cache quando possível
+- Monitore métricas Core Web Vitals
 
-- Verifique a [documentação](docs/)
-- Procure por issues similares
-- Abra uma nova issue com a tag `question`
-- Entre em contato via [contato@morahub.com.br](mailto:contato@morahub.com.br)
+## 🔒 Segurança
 
-## 📄 Licença
+- Não exponha dados sensíveis
+- Valide inputs
+- Sanitize outputs
+- Siga as melhores práticas OWASP
+- Reporte vulnerabilidades em privado
 
-Ao contribuir, você concorda que suas contribuições serão licenciadas sob a mesma [licença MIT](LICENSE) que cobre este projeto.
+## 📚 Recursos Úteis
+
+- [Documentação React](https://react.dev)
+- [Documentação TypeScript](https://www.typescriptlang.org/docs)
+- [Documentação Tailwind](https://tailwindcss.com/docs)
+- [Documentação Supabase](https://supabase.com/docs)
+- [Conventional Commits](https://www.conventionalcommits.org)
+
+---
+
+<div align="center">
+
+**Dúvidas?** [Abra uma issue](https://github.com/luborgess/morahub/issues/new) ou entre em contato via [email](mailto:contato@morahub.com.br).
+
+</div>

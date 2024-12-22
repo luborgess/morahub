@@ -13,7 +13,7 @@
 
 **Conectando produtos e serviços nas moradias universitárias da UFMG**
 
-[🌐 Acessar](https://morahub.com.br) · [🐛 Bugs](https://github.com/luborgess/morahub/issues) · [✨ Features](https://github.com/luborgess/morahub/issues)
+[🌐 Acessar](https://morahub.com.br) · [🐛 Bugs](https://github.com/luborgess/morahub/issues/new?template=bug_report.md) · [✨ Features](https://github.com/luborgess/morahub/issues/new?template=feature_request.md)
 
 </div>
 
@@ -68,7 +68,7 @@ O MoraHub surgiu para resolver um problema real: a dispersão de informações s
 
 ```bash
 # Clone o repositório
-git clone https://github.com/luborgess/morahub.git
+git clone https://github.com/seu-username/morahub.git
 cd morahub
 
 # Instale as dependências
@@ -83,10 +83,32 @@ pnpm dev
 
 ## 📚 Documentação
 
-Para mais informações sobre o projeto, consulte nossa [documentação](docs/):
+Para mais informações sobre o projeto, consulte nossa documentação:
 
 - [Arquitetura do Banco de Dados](docs/database-archtecture.md)
 - [Guia de Contribuição](docs/CONTRIBUTING.md)
+- [Código de Conduta](docs/CODE_OF_CONDUCT.md)
+- [Política de Segurança](SECURITY.md)
+- [Changelog](CHANGELOG.md)
+
+## 🤝 Como Contribuir
+
+Adoramos contribuições da comunidade! Veja como você pode ajudar:
+
+1. 🐛 Reporte bugs ou sugira features nas [Issues](https://github.com/luborgess/morahub/issues)
+2. 📖 Melhore nossa documentação
+3. 💻 Submeta Pull Requests
+4. 🌟 Dê uma estrela no projeto
+
+Leia nosso [Guia de Contribuição](docs/CONTRIBUTING.md) para mais detalhes.
+
+## 🔒 Segurança
+
+Para reportar vulnerabilidades de segurança, por favor leia nossa [Política de Segurança](SECURITY.md).
+
+## 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ## 👥 Time
 
@@ -127,21 +149,12 @@ Para mais informações sobre o projeto, consulte nossa [documentação](docs/):
   </tr>
 </table>
 
-## 🤝 Contribuindo
+---
 
-Adoramos contribuições! Se você tem uma ideia para melhorar o MoraHub:
+<div align="center">
+  
+**[⬆ Voltar ao topo](#morahub)**
 
-1. 🍴 Fork o projeto
-2. 🔨 Crie sua Feature Branch (`git checkout -b feature/MinhaFeature`)
-3. 💾 Commit suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
-4. 📤 Push para a Branch (`git push origin feature/MinhaFeature`)
-5. 🔀 Abra um Pull Request
+Feito com ❤️ para a comunidade UFMG
 
-## 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-## 📱 Contato
-
-🌐 Site: [morahub.com.br](https://morahub.com.br)  
-📧 Email: [contato@morahub.com.br](mailto:contato@morahub.com.br)
+</div>
