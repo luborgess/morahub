@@ -18,8 +18,6 @@ erDiagram
     HOUSING {
         UUID id PK "Identificador único"
         TEXT name "Nome da moradia"
-        TIMESTAMP created_at "Data de criação"
-        TIMESTAMP updated_at "Data de atualização"
     }
 
     USERS {
@@ -31,7 +29,7 @@ erDiagram
         TEXT celular "Número de celular"
         TEXT cpf "CPF do usuário"
         TEXT bio "Biografia/descrição"
-        TEXT image_url "URL da foto de perfil"
+        JSONB image_url "URL da foto de perfil"
         ENUM type "Tipo de usuário"
         ENUM status "Status da conta"
         TIMESTAMP created_at "Data de criação"
@@ -58,8 +56,6 @@ erDiagram
         ENUM type "Tipo da categoria"
         BOOLEAN active "Status ativo/inativo"
         INTEGER order "Ordem de exibição"
-        TIMESTAMP created_at "Data de criação"
-        TIMESTAMP updated_at "Data de atualização"
     }
 
     SUBCATEGORIES {
@@ -69,8 +65,6 @@ erDiagram
         TEXT description "Descrição"
         BOOLEAN active "Status ativo/inativo"
         INTEGER order "Ordem de exibição"
-        TIMESTAMP created_at "Data de criação"
-        TIMESTAMP updated_at "Data de atualização"
     }
 
     LISTINGS {
@@ -83,7 +77,7 @@ erDiagram
         DECIMAL price "Preço do item"
         ENUM type "Tipo do anúncio"
         ENUM status "Status do anúncio"
-        TEXT[] images "URLs das imagens"
+        JSONB images "Metadata e URLs das imagens"
         TEXT condition "Condição do item"
         TEXT availability "Disponibilidade"
         INTEGER visualizacoes "Contador de visualizações"
@@ -140,22 +134,50 @@ erDiagram
 
 ### Convenções
 - Todos os `id` são UUIDs v4
-- Timestamps são armazenados em UTC
-- Arrays são implementados como JSONB no PostgreSQL
+- Timestamps apenas em tabelas que necessitam tracking temporal (listings, users, validations)
+- Campos JSONB para estruturas complexas (ex: images)
 - Campos de texto longos são limitados a 2000 caracteres
 - Preços são armazenados com 2 casas decimais
+- Validação e sanitização de dados críticos (CPF, celular) feita no frontend
 
 ### Índices
-- Chaves primárias (PK): índice B-tree
-- Chaves estrangeiras (FK): índice B-tree
-- Campos de busca: índice GiST para texto
-- Status e tipos: índice Hash
+#### Primary Keys
+- `categories_pkey`: Chave primária para categorias
+- `housing_pkey`: Chave primária para housing
+- `listings_pkey`: Chave primária para listings
+- `subcategories_pkey`: Chave primária para subcategorias
+- `users_pkey`: Chave primária para users
+- `validations_pkey`: Chave primária para validations
+
+#### Unique Keys
+- `users_email_key`: Garante email único por usuário
+- `users_cpf_key`: Garante CPF único por usuário
+
+#### Índices de Performance
+- `idx_active_listings`: Otimiza busca de anúncios ativos
+- `idx_listings_price_range`: Otimiza busca por faixa de preço
+- `idx_listings_search`: Otimiza busca textual em anúncios
+
+#### Índices Compostos
+```sql
+CREATE INDEX idx_listings_composite ON listings (
+    category_id,
+    subcategory_id,
+    status,
+    price DESC,
+    created_at DESC
+);
+```
+
+Este índice composto otimiza as queries mais comuns do marketplace:
+- Listagem por categoria/subcategoria
+- Filtragem por status
+- Ordenação por preço
+- Ordenação por data de criação
 
 ### Constraints
 - Chaves estrangeiras com DELETE CASCADE
 - Campos obrigatórios: id, created_at
-- Validações de email e CPF
-- Limite de 10 imagens por anúncio
 
 ### Segurança
 - Row Level Security (RLS) ativo
