@@ -1,5 +1,4 @@
 <div align="center">
-
 <img src="https://imgur.com/dR0HLjC.jpg" alt="MoraHub Logo" width="200" height="50" style="max-width: 100%; height: auto;" />
 <br></br>
 
@@ -17,17 +16,17 @@
 
 ---
 
-## 💡 Sobre o Projeto
+## Sobre o Projeto
 
 O MoraHub surgiu para resolver um problema real: a dispersão de informações sobre produtos e serviços nas moradias universitárias da UFMG.
 
-### Desafio Atual 🎯
+### Desafio Atual
 - Anúncios espalhados em diversos grupos de WhatsApp
 - Dificuldade em encontrar produtos e serviços específicos
 - Repostagens constantes para manter visibilidade
 - Falta de sistema de confiança entre usuários
 
-### Nossa Solução 🚀
+### Nossa Solução
 - Hub central para todos os anúncios
 - Sistema de busca e filtros avançados
 - Validação de vínculo universitário 
@@ -36,33 +35,31 @@ O MoraHub surgiu para resolver um problema real: a dispersão de informações s
 
 ---
 
-## ⚡ Stack Técnica
+## Stack Técnica
+
+> [Ver documentação técnica completa](docs/technical-stack.md)
 
 ### Frontend
-- ⚛️ **Core**: React 18 + Vite 5 + TypeScript 5
-- 🎨 **UI/UX**: Tailwind CSS 3 + Shadcn/ui
-- 🔄 **Estado**: Zustand
-- 📝 **Forms**: React Hook Form + Zod
-- 🔒 **Auth**: Supabase Auth
-- 📱 **PWA**: Vite PWA
+- **Core**: React 18 + TypeScript 5 + Vite 5
+- **UI/UX**: Tailwind CSS 3 + Shadcn/ui
+- **Estado**: Zustand + React Query
+- **Forms**: React Hook Form + Zod
 
 ### Backend (Supabase)
-- 📦 **Database**: PostgreSQL + Supabase
-- 🗄️ **Storage**: Supabase Storage
-- 🔒 **Segurança**: Row Level Security (RLS)
-- 🔄 **Real-time**: Supabase Realtime
-- 🔑 **Auth**: Supabase Auth
+- **Database**: PostgreSQL 15 + Supabase
+- **Storage**: Supabase Storage + CDN
+- **Segurança**: Row Level Security (RLS)
+- **Real-time**: Websockets + Pub/Sub
 
 ### DevOps & Tooling
-- 📦 **Package Manager**: pnpm
-- 🛠️ **Build Tool**: Vite
-- 🧪 **Testing**: Vitest
-- 📝 **Linting**: ESLint + Prettier
-- 📱 **Mobile**: PWA + Capacitor
+- **Package Manager**: pnpm
+- **Build & Deploy**: Vite + GitHub Actions + Vercel
+- **Qualidade**: Vitest + ESLint + Prettier
+- **Mobile**: PWA + Service Workers
 
 ---
 
-## 🚀 Começando
+## Começando
 
 ```bash
 # Clone o repositório
@@ -79,7 +76,7 @@ cp .env.example .env
 pnpm dev
 ```
 
-## 📚 Documentação
+## Documentação
 
 Para mais informações sobre o projeto, consulte nossa documentação:
 
@@ -89,26 +86,26 @@ Para mais informações sobre o projeto, consulte nossa documentação:
 - [Política de Segurança](SECURITY.md)
 - [Changelog](CHANGELOG.md)
 
-## 🤝 Como Contribuir
+## Como Contribuir
 
 Adoramos contribuições da comunidade! Veja como você pode ajudar:
 
-1. 🐛 Reporte bugs ou sugira features nas [Issues](https://github.com/luborgess/morahub/issues)
-2. 📖 Melhore nossa documentação
-3. 💻 Submeta Pull Requests
-4. 🌟 Dê uma estrela no projeto
+1. Reporte bugs ou sugira features nas [Issues](https://github.com/luborgess/morahub/issues)
+2. Melhore nossa documentação
+3. Submeta Pull Requests
+4. Dê uma estrela no projeto
 
 Leia nosso [Guia de Contribuição](docs/CONTRIBUTING.md) para mais detalhes.
 
-## 🔒 Segurança
+## Segurança
 
 Para reportar vulnerabilidades de segurança, por favor leia nossa [Política de Segurança](SECURITY.md).
 
-## 📄 Licença
+## Licença
 
 Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
-## 👥 Time
+## Time
 
 <table>
   <tr>
