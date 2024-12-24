@@ -1,5 +1,5 @@
-import { supabase } from '@/lib/supabase'
-import { UserModel, UserInsert, UserUpdate } from '@/models/User'
+import { supabase } from '../lib/supabase'
+import { UserModel, UserInsert, UserUpdate } from '../models/User'
 
 export class UserService {
   // Buscar usuário por ID

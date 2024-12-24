@@ -4,7 +4,7 @@ import { ListingService } from '@/services/ListingService'
 import { ListingModel } from '@/models/Listing'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/examples/Card'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 
 export function ListingsList() {

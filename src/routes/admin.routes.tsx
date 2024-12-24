@@ -1,27 +1,27 @@
 import { RouteObject } from 'react-router-dom'
 import { ListCategories } from '@/pages/admin/categories/ListCategories'
 import { CategoryForm } from '@/pages/admin/categories/CategoryForm'
+import { TestCRUD } from '@/pages/admin/TestCRUD'
 
 export const adminRoutes: RouteObject[] = [
   {
-    path: '/admin',
+    path: '',
     children: [
       {
+        path: 'test',
+        element: <TestCRUD />
+      },
+      {
         path: 'categories',
-        children: [
-          {
-            path: '',
-            element: <ListCategories />
-          },
-          {
-            path: 'new',
-            element: <CategoryForm />
-          },
-          {
-            path: 'edit/:id',
-            element: <CategoryForm />
-          }
-        ]
+        element: <ListCategories />
+      },
+      {
+        path: 'categories/new',
+        element: <CategoryForm />
+      },
+      {
+        path: 'categories/edit/:id',
+        element: <CategoryForm />
       }
     ]
   }

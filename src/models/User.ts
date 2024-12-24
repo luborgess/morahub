@@ -1,4 +1,4 @@
-import { Database } from '@/types/supabase'
+import { Database } from '../types/supabase'
 
 export type User = Database['public']['Tables']['users']['Row']
 export type UserInsert = Database['public']['Tables']['users']['Insert']

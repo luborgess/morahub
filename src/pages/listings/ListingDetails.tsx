@@ -4,7 +4,7 @@ import { ListingService } from '@/services/ListingService'
 import { ListingModel } from '@/models/Listing'
 import { useAuth } from '@/contexts/AuthContext'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/examples/Card'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 
 export function ListingDetails() {

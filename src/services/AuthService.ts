@@ -1,6 +1,6 @@
-import { supabase } from '@/lib/supabase'
+import { supabase } from '../lib/supabase'
 import { UserService } from './UserService'
-import { UserModel, UserInsert } from '@/models/User'
+import { UserModel, UserInsert } from '../models/User'
 import { AuthError } from '@supabase/supabase-js'
 
 export class AuthService {
