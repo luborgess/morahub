@@ -1,6 +1,6 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./Card";
+import { Badge } from "../ui/badge";
 import { 
   Briefcase, BookOpen, Building2, ChefHat, Gift, Laptop, Package, 
   Pencil, Repeat, Scissors, ShoppingBag, Tag, Timer, 
