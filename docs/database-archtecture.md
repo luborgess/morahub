@@ -99,15 +99,15 @@ erDiagram
 ### User Status
 | Valor | Descrição | Comportamento |
 |-------|-----------|---------------|
-| `ACTIVE` | Usuário ativo | Acesso total |
-| `INACTIVE` | Usuário inativo | Sem acesso |
-| `BLOCKED` | Usuário bloqueado | Banido do sistema |
+| `ACTIVE` | Conta ativa | Acesso total |
+| `INACTIVE` | Conta inativa | Acesso restrito |
+| `BLOCKED` | Conta bloqueada | Sem acesso |
 
 ### Validation Type
-| Valor | Descrição | Documentos Necessários |
-|-------|-----------|----------------------|
+| Valor | Descrição | Requisitos |
+|-------|-----------|------------|
 | `HOUSING` | Validação de moradia | Comprovante de residência |
-| `UFMG_AFFILIATION` | Validação UFMG | Comprovante de vínculo |
+| `UFMG_AFFILIATION` | Vínculo UFMG | Documento institucional |
 
 ### Validation Status
 | Valor | Descrição | Próximos Passos |
@@ -116,19 +116,27 @@ erDiagram
 | `APPROVED` | Aprovado | Acesso liberado |
 | `REJECTED` | Rejeitado | Submeter novamente |
 
-### Listing Type
+### Category Type
 | Valor | Descrição | Características |
 |-------|-----------|-----------------|
 | `PRODUCT` | Produto físico | Requer imagens |
 | `SERVICE` | Serviço | Requer descrição detalhada |
 
+### Listing Type
+| Valor | Descrição | Características |
+|-------|-----------|-----------------|
+| `SALE` | Venda | Requer preço |
+| `RENT` | Aluguel | Requer valor mensal |
+| `DONATION` | Doação | Sem custo |
+| `EXCHANGE` | Troca | Requer descrição do interesse |
+
 ### Listing Status
-| Valor | Descrição | Visibilidade |
-|-------|-----------|--------------|
-| `ACTIVE` | Anúncio ativo | Visível para todos |
-| `INACTIVE` | Anúncio pausado | Visível só para dono |
-| `SOLD` | Item vendido | Marcado como vendido |
-| `DELETED` | Anúncio removido | Não visível |
+| Valor | Descrição | Comportamento |
+|-------|-----------|---------------|
+| `ACTIVE` | Disponível | Visível para todos |
+| `SOLD` | Vendido | Não visível |
+| `RESERVED` | Reservado | Visível com marca d'água |
+| `DELETED` | Removido | Não visível |
 
 ## 📝 Notas Técnicas
 

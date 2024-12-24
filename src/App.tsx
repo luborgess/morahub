@@ -5,9 +5,11 @@ import RootLayout from './components/layout/RootLayout'
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <RootLayout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </RootLayout>
     </BrowserRouter>
   )
 }

@@ -2,15 +2,13 @@
 
 ## 💫 Nossa Promessa
 
-Como membros, contribuidores e líderes do MoraHub, nos comprometemos a tornar a participação em nossa comunidade uma experiência livre de assédio para todos, independentemente de idade, corpo, deficiência visível ou invisível, etnia, características sexuais, identidade ou expressão de gênero, nível de experiência, educação, status socioeconômico, nacionalidade, aparência pessoal, raça, religião, ou identidade e orientação sexual.
-
+Como membros, contribuidores e líderes do MoraHub, nos comprometemos a tornar a participação em nossa comunidade uma experiência livre de assédio para todos, independentemente de idade, corpo, deficiência visível ou invisível, etnia, sexualidade, identidade ou expressão de gênero, nível de experiência, educação, status socioeconômico, nacionalidade, aparência pessoal, raça, e religião.
 Comprometemo-nos a agir e interagir de maneiras que contribuam para uma comunidade aberta, acolhedora, diversa, inclusiva e saudável.
 
 ## 🎯 Nossos Padrões
 
 Exemplos de comportamento que contribuem para um ambiente positivo:
 
-* Demonstrar empatia e bondade com outras pessoas
 * Respeitar opiniões, pontos de vista e experiências diferentes
 * Dar e receber feedback construtivo de maneira respeitosa
 * Assumir responsabilidade, pedir desculpas aos afetados por nossos erros e aprender com a experiência

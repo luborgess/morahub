@@ -1,5 +1,3 @@
-# MoraHub
-
 <div align="center">
 
 <img src="https://imgur.com/dR0HLjC.jpg" alt="MoraHub Logo" width="200" height="50" style="max-width: 100%; height: auto;" />

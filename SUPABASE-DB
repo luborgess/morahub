@@ -1,0 +1,54 @@
+## Tabelas
+
+| schema | table | owner |
+| --- | --- | --- |
+| public | users | postgres |
+| public | validations | postgres |
+| public | listings | postgres |
+| public | categories | postgres |
+| public | subcategories | postgres |
+| public | housing | postgres |
+
+## INDEX
+
+| schema | table | index | definition |
+| --- | --- | --- | --- |
+| public | categories | categories_pkey | CREATE UNIQUE INDEX categories_pkey ON public.categories USING btree (id) |
+| public | categories | idx_categories_order | CREATE INDEX idx_categories_order ON public.categories USING btree ("order") |
+| public | housing | housing_pkey | CREATE UNIQUE INDEX housing_pkey ON public.housing USING btree (id) |
+| public | listings | idx_listings_category_id | CREATE INDEX idx_listings_category_id ON public.listings USING btree (category_id) |
+| public | listings | idx_listings_price | CREATE INDEX idx_listings_price ON public.listings USING btree (price) |
+| public | listings | idx_listings_price_range | CREATE INDEX idx_listings_price_range ON public.listings USING btree (price DESC) |
+| public | listings | idx_listings_status | CREATE INDEX idx_listings_status ON public.listings USING btree (status) |
+| public | listings | idx_listings_subcategory_id | CREATE INDEX idx_listings_subcategory_id ON public.listings USING btree (subcategory_id) |
+| public | listings | idx_listings_user_id | CREATE INDEX idx_listings_user_id ON public.listings USING btree (user_id) |
+| public | listings | listings_pkey | CREATE UNIQUE INDEX listings_pkey ON public.listings USING btree (id) |
+| public | subcategories | idx_subcategories_order | CREATE INDEX idx_subcategories_order ON public.subcategories USING btree ("order") |
+| public | subcategories | subcategories_pkey | CREATE UNIQUE INDEX subcategories_pkey ON public.subcategories USING btree (id) |
+| public | users | users_cpf_key | CREATE UNIQUE INDEX users_cpf_key ON public.users USING btree (cpf) |
+| public | users | users_email_key | CREATE UNIQUE INDEX users_email_key ON public.users USING btree (email) |
+| public | users | users_pkey | CREATE UNIQUE INDEX users_pkey ON public.users USING btree (id) |
+| public | validations | idx_validations_status | CREATE INDEX idx_validations_status ON public.validations USING btree (status) |
+| public | validations | idx_validations_user_id | CREATE INDEX idx_validations_user_id ON public.validations USING btree (user_id) |
+| public | validations | validations_pkey | CREATE UNIQUE INDEX validations_pkey ON public.validations USING btree (id) |
+
+## Constraints
+
+| schema | table | constraint_name | constraint_type | column_name |
+| --- | --- | --- | --- | --- |
+| public | categories | categories_pkey | PRIMARY KEY | id  |
+| public | housing | housing_pkey | PRIMARY KEY | id  |
+| public | listings | listings_pkey | PRIMARY KEY | id  |
+| public | listings | listings_category_id_fkey | FOREIGN KEY | category_id |
+| public | listings | listings_subcategory_id_fkey | FOREIGN KEY | subcategory_id |
+| public | listings | listings_user_id_fkey | FOREIGN KEY | user_id |
+| public | subcategories | subcategories_category_id_fkey | FOREIGN KEY | category_id |
+| public | subcategories | subcategories_pkey | PRIMARY KEY | id  |
+| public | users | users_email_key | UNIQUE | email |
+| public | users | users_pkey | PRIMARY KEY | id  |
+| public | users | users_housing_id_fkey | FOREIGN KEY | housing_id |
+| public | users | users_cpf_key | UNIQUE | cpf |
+| public | validations | validations_pkey | PRIMARY KEY | id  |
+| public | validations | validations_user_id_fkey | FOREIGN KEY | user_id |
+
+``
