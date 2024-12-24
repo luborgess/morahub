@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom'
-import { Bell } from 'lucide-react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Bell } from 'lucide-react';
 
-export default function Navbar() {
+export function Navbar() {
   return (
     <div className="bg-white border-b">
       <div className="container mx-auto px-4">
@@ -38,5 +39,5 @@ export default function Navbar() {
         </div>
       </div>
     </div>
-  )
+  );
 }
