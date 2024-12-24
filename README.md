@@ -106,7 +106,9 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
         <sub><b>Lucas Borges</b></sub>
       </a>
       <br />
-      <sub>Graduando em Sistemas de Informação - UFMG</sub>
+      <sub>CEO & Founder</sub>
+      <br />
+      <sub>Sistemas de Informação - UFMG</sub>
       <br /> <br />
       <a href="https://github.com/luborgess">
         <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
@@ -122,7 +124,9 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
         <sub><b>Emanuelly Carvalho</b></sub>
       </a>
       <br />
-      <sub>Graduanda em Sistemas de Informação - UFMG</sub>
+      <sub>CTO & Co-founder</sub>
+      <br />
+      <sub>Sistemas de Informação - UFMG</sub>
       <br /> <br />
       <a href="https://github.com/emanuellycarvalho">
         <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
