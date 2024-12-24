@@ -1,6 +1,6 @@
-# Stack Técnica Detalhada
+# ⚡ Stack Técnica Detalhada
 
-## Frontend
+## 🎨 Frontend
 
 ### Core
 - React 18 com TypeScript 5 para tipagem estática
@@ -23,7 +23,7 @@
 - Zod para validação de tipos em runtime
 - Validação de esquema do TypeScript
 
-## Backend (Supabase)
+## 🔧 Backend (Supabase)
 
 ### Database
 - PostgreSQL 15 como banco de dados principal
@@ -47,7 +47,7 @@
 - Websockets para notificações instantâneas
 - Pub/Sub para eventos assíncronos
 
-## DevOps & Tooling
+## 🛠️ DevOps & Tooling
 
 ### Gerenciamento de Pacotes
 - pnpm para instalação rápida e eficiente
@@ -72,7 +72,7 @@
 - Service Workers para offline
 - Web Push para notificações
 
-## Arquitetura
+## 📐 Arquitetura
 
 ### Padrões de Projeto
 - Clean Architecture para separação de responsabilidades

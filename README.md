@@ -16,7 +16,7 @@
 
 ---
 
-## Sobre o Projeto
+## 💡 Sobre o Projeto
 
 O MoraHub surgiu para resolver um problema real: a dispersão de informações sobre produtos e serviços nas moradias universitárias da UFMG.
 
@@ -35,35 +35,25 @@ O MoraHub surgiu para resolver um problema real: a dispersão de informações s
 
 ---
 
-## Stack Técnica
+## ⚡ Stack Técnica
 
-> [Ver documentação técnica completa](docs/technical-stack.md)
+> 📚 [Ver documentação técnica completa](docs/technical-stack.md)
 
 ### Frontend
 - **Core**: React 18 + TypeScript 5 + Vite 5
 - **UI/UX**: Tailwind CSS 3 + Shadcn/ui
-- **Estado**: Zustand + React Query
-- **Forms**: React Hook Form + Zod
 
-### Backend (Supabase)
+
+### Backend
 - **Database**: PostgreSQL 15 + Supabase
-- **Storage**: Supabase Storage + CDN
-- **Segurança**: Row Level Security (RLS)
-- **Real-time**: Websockets + Pub/Sub
-
-### DevOps & Tooling
-- **Package Manager**: pnpm
-- **Build & Deploy**: Vite + GitHub Actions + Vercel
-- **Qualidade**: Vitest + ESLint + Prettier
-- **Mobile**: PWA + Service Workers
 
 ---
 
-## Começando
+## 🚀 Começando
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-username/morahub.git
+git clone https://github.com/luborgess/morahub.git
 cd morahub
 
 # Instale as dependências
@@ -76,7 +66,7 @@ cp .env.example .env
 pnpm dev
 ```
 
-## Documentação
+## 📖 Documentação
 
 Para mais informações sobre o projeto, consulte nossa documentação:
 
@@ -86,7 +76,7 @@ Para mais informações sobre o projeto, consulte nossa documentação:
 - [Política de Segurança](SECURITY.md)
 - [Changelog](CHANGELOG.md)
 
-## Como Contribuir
+## 🤝 Como Contribuir
 
 Adoramos contribuições da comunidade! Veja como você pode ajudar:
 
@@ -97,15 +87,15 @@ Adoramos contribuições da comunidade! Veja como você pode ajudar:
 
 Leia nosso [Guia de Contribuição](docs/CONTRIBUTING.md) para mais detalhes.
 
-## Segurança
+## 🔒 Segurança
 
 Para reportar vulnerabilidades de segurança, por favor leia nossa [Política de Segurança](SECURITY.md).
 
-## Licença
+## 📄 Licença
 
 Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
-## Time
+## 👥 Time
 
 <table>
   <tr>
